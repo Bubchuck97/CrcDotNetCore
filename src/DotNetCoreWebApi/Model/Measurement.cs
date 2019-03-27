@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DotNetCoreWebApi.Model
 {
-    public class Measurment
+    public class Measurement
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
