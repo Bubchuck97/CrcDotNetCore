@@ -17,15 +17,14 @@ namespace DotNetCoreWebApi.Repozytorium
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<Measurement>> GetAllAsync()
+        public async Task<IEnumerable<Measurement>> GetAll()
         {
             return await _dbContext.Measurements.ToListAsync();
         }
 
         public async Task<Measurement> Get(long id)
         {
-            return await _dbContext.Measurements.FirstOrDefaultAsync(
-                m => m.Id == id);
+            return await _dbContext.Measurements.FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task Add(Measurement entity)

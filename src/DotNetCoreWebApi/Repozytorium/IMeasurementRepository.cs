@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DotNetCoreWebApi.Repozytorium
 {
-    interface IMeasurementRepository<TEntity>
+    public interface IMeasurementRepository<TEntity>
     {
-        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<IEnumerable<TEntity>> GetAll();
         Task<TEntity> Get(long id);
         Task Add(TEntity entity);
         Task Update(Measurement measurement, TEntity entity);
