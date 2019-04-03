@@ -28,8 +28,8 @@ namespace DotNetCoreWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<MeasurementContext>(
-                options => options.UseSqlServer(Configuration["ConnectionString:LabDb"]));
+
+            services.AddDbContext<MeasurementContext>(options => options.UseSqlServer(Configuration["ConnectionString:LabDb"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
