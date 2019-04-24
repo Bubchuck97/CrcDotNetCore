@@ -1,5 +1,4 @@
 ﻿class NewMeasurementSection {
-
     _listeners = []
 
     constructor() {
