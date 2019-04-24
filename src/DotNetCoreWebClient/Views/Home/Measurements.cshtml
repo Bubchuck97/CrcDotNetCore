@@ -3,12 +3,6 @@
     ViewData["Title"] = "Measurements";
 }
 
-<environment include="Development">
-    <script src="~/js/newMeasurementSection.js"></script>
-    <script src="~/js/measurementsController.js"></script>
-</environment>
-
-
 <h1>Measurements</h1>
 <div class="form-group">
     <div class="form-group">
@@ -21,8 +15,9 @@
     </div>
     <button type="button" class="btn btn-primary" id="measurements_addBtn">Add</button>
 </div>
+<script src="~/js/newMeasurementSection.js" asp-append-version="true"></script>
 
-<div class="container">
+<div class="container" id="measurements_container">
     <div class="row bg-light">
         <div class="col-sm">
             Id
@@ -40,22 +35,25 @@
             @*Empty for remove*@
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm">
-            First
+    <div class="row d-none">
+        <div class="col-sm" data-columnt-type="id">
+
         </div>
-        <div class="col-sm">
-            Second
+        <div class="col-sm" data-columnt-type="name">
+
         </div>
-        <div class="col-sm">
-            Third
+        <div class="col-sm" data-columnt-type="value">
+
         </div>
-        <div class="col-sm">
-            Fourth
+        <div class="col-sm" data-columnt-type="createdby">
+
         </div>
         <div class="col-sm">
             <a href="#">Remove</a>
         </div>
     </div>
 </div>
+
+<script src="~/js/measurementListSection.js" asp-append-version="true"></script>
+<script src="~/js/measurementsController.js" asp-append-version="true"></script>
 
