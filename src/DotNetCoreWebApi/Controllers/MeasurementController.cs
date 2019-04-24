@@ -20,7 +20,7 @@ namespace DotNetCoreWebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll(long id)
+        public async Task<IActionResult> GetAll()
         {
             var measurements = await _measurementRepository.GetAll();
 
